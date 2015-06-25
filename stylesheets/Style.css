@@ -104,12 +104,6 @@ body {
 #aboutLink:hover > .hvr-float {
 	-webkit-transform: translateY(-12px);
 	transform: translateY(-12px);
-  	content: url('aboutHover.png');
-}
-
-.hvr-float: before {
-	-webkit-transform: translateY(-12px);
-	transform: translateY(-12px);
   	content: url('https://cloud.githubusercontent.com/assets/8756331/8347804/6a79c458-1ad0-11e5-814e-9b08f004f4f4.png');
 }
 
