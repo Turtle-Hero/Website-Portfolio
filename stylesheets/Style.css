@@ -1,15 +1,10 @@
 body {
 	margin: 0;
 	background-color: #FFFFFF;
-	font-family: "ff-meta-web-pro",sans-serif;
+	font-family: "ff-meta-web-pro", sans-serif;
 }
 
-#container {
-	
-}
-
-
-/* dashboard and menu css */
+/* DASHBOARD + MENU Styling */
 #dashboard {
 	display: inline-block;
 	position: fixed;
@@ -24,7 +19,7 @@ body {
 	border-color: #4C4C4C;
 
 	border-image:
-		linear-gradient(to right, #4C4C4C, #727373) 1 100%;
+		linear-gradient(to right, #414141, #585858) 1 100%;
 	
 }
 
@@ -32,7 +27,7 @@ body {
 	display: block;
 	width: 80%;
 	margin: auto;
-	margin: 5% auto 15% auto;
+	margin: 5% auto 10% auto;
 }
 
 #logo {
@@ -45,47 +40,177 @@ body {
 	height: 22vh;
 	width: 80%;
 	margin-left: 15%;
-	line-height: 100%;
 }
 
-.dashImg {
-	display: inline-block;
-	width: 28%;
-	vertical-align: middle;
+.dashMenu a {
+	text-decoration: none;
+	color: #000000;
 }
 
 .menuText {
 	display: inline-block;
-	width: 60%;
-	margin-left: 7%;
+	width: 40%;
+	padding-left: 7%;
 	font-size: 32px;
 	vertical-align: middle;
 }
 
-.menuItem {
-	display: block;
-	max-width: 100%;
-	max-height: 100%;
+.hidden {
+	display: none;
 }
-/* --- end Dashboard css --- */
+
+
+
+
+/* Float 
+ * Author: Ian Lunn @IanLunn
+ * Github: https://github.com/IanLunn/Hover
+ * Modified by me
+ *
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+*/
+.hvr-float {
+  display: inline-block;
+  width: 30%;
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#aboutLink:hover {
+	color: #F9EEE1;
+}
+
+#workLink:hover {
+	color: #F9EEE1;
+}
+
+#contactLink:hover {
+	color: #F9EEE1;
+}
+
+#aboutLink:hover > .hvr-float {
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+  	content: url('aboutHover.png');
+}
+
+.hvr-float: before {
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+  	content: url('aboutHover.png');
+}
+
+#workLink:hover > .hvr-float {
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+	content: url('workHover.png');
+}
+
+#contactLink:hover > .hvr-float {
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+	content: url('contactHover.png');
+}
+
+
+/* Underline From Center 
+ * Author: Ian Lunn @IanLunn
+ * Github: https://github.com/IanLunn/Hover
+ * Modified by me
+ *
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+*/
+
+.hvr-underline-from-center {
+  display: inline-block;
+ margin-left: 7%;
+	padding: 0 3%;
+	font-size: 32px;
+  vertical-align: bottom;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #F9EEE1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#aboutLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
+
+#workLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
+
+#contactLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
+
+/* --- END DASHBOARD Styling --- */
 
 /*general block styling for each section */
 .contentBlock {
-	display: inline-block;
-	float: right;
-	width: 65%;
-	height: 90vh;
-	margin: 3% 3% 0 0;
+	display: block;
+	width: 100%;
+	margin: 5% 0 0 0;
 	border-radius: 5px;
 	background-color: #F9EEE1;	
 }
 
 /* --- end general block styling --- */
 
+#rightContainer {
+	display: block;
+	float: right;
+	width: 67%;
+	margin-right: 2%;
+}
+
 /* INTRO block Styling */
+#intro {
+	height: 90vh;
+}
+
 #introLeft {
 	display: inline-block;
-	width: 50%;
+	width: 45%;
 	height: 90%;
 	margin: 5% 0;
 }
@@ -93,13 +218,15 @@ body {
 #introRight {
 	display: inline-block;
 	float: right;
-	width: 50%;
+	width: 55%;
 	font-size: 19px;
 	line-height: 1.4em;
 }
 
 #introRight p {
-	margin: 25% 3% 5% 0;
+	height: 100%;
+	padding: 25% 0;
+	margin: 0 8% 0 0;
 }
 
 #intro h1 {
@@ -122,24 +249,328 @@ body {
 }
 /* End INTRO block Styling */
 
-/* CONTACT block Styling */
+/* ABOUT block Styling */
+
+#about {
+	background-color: #414141;
+	color: #F9EEE1;
+}
+
+#experience {
+	width: 100%;
+	height: 40%;
+}
+
+.expBlocks {
+	display: inline-block;
+	text-align: center;
+	width: 49%;
+	height: 90%;
+	vertical-align: top;
+}
+
+.expBlocks p {
+	text-align: left;
+	line-height: 1.4em;
+	font-size: 17px;
+	margin: 4% 9% 0 10%;
+}
+
+.expBlocks h3 {
+	display: block;
+	font-size: 28px;
+	width: 100%;
+	height: 20%;
+	margin: 10% auto 0 auto;
+}
+
+#bookDiv {
+	display: block;
+	width: 100%;
+	margin: 5% auto 0 auto;
+}
+
+#bookLeft {
+	display: inline-block;
+	width: 78%;
+}
+
+#bookRight {
+	display: inline-block;
+	width: 15%;
+	margin-right: 5%;
+}
+
+#bookDiv h1 {
+	display: block;
+	float: right;
+	margin-right: 8%;
+	font-size: 35px;
+	line-height: 60px;
+}
+
+#bookImg {
+	display:block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#tableContainer {
+	display: block;
+	width: 100%;
+	margin: 5% 0 8% 0;
+}
+
+#skills {
+	display: inline-table;
+	width: 70%;
+	border-spacing: 5px 10px;
+}
+
+#skills th {
+	width: 20%;
+	padding: 0 12px;
+	max-height: 10%;
+}
+
+#skills td {
+	width: 20%;
+}
+
+#key {
+	display: inline-table;
+	width: 12%;
+	margin-left: 7%;
+	border-spacing: 0 5px;
+	text-align: center;
+}
+
+#key h3 {
+	font-size: 20px;
+	margin: 0;
+}
+
+.rowHeader {
+	padding: 15px;
+	text-align: right;
+	font-size: 20px;
+	line-height: 22px;
+}
+
+.colHeader {
+	font-size: 20px;
+	line-height: 22px;
+	vertical-align: bottom;
+}
+
+
+.filled {
+	background-color: #09894B;
+}
+
+.progress {
+	background-image: url("diagBackground.png");
+	background-repeat: no-repeat;
+	background-size: 120% 120%;
+}
+
+.unfilled {
+	background-color: #77B295;
+}
+
+#future h3 {
+	display: inline-block;
+	width: 70%;
+	font-size: 32px;
+	margin: 0;
+}
+
+.future-P {
+	width: 75%;
+	font-size: 17px;
+	line-height: 1.4em;
+	margin: -20px 5% 0 18%;
+}
+
+#lastFuture {
+	padding-bottom: 7%;
+	margin-top: 0;
+}
+
+
+#lastFuture a {
+	color: #F9EEE1;
+	text-decoration: none;
+	border-bottom: 3px solid;
+}
+
+#future ul {
+	margin: 1% 5% 1% 18%;
+}
+
+#rocket {
+	display: inline-block;
+	margin: 0 5%;
+	width: 12%;
+	vertical-align: middle;
+}
+
+
+/* --- END ABOUT --- */
+
+
+
+/* --- WORK block Styling --- */
+
+#work {
+	position: relative;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+}
+
+#scrollContainer {
+	position: relative;
+	width: 300%;
+	padding: 5% 0 0 3%;
+}
+
+.workItem {
+	display: inline-block;
+	width: 33%;
+}
+
+.workImg {
+	display: inline-block;
+	position: relative;
+	width: 60%;
+	height: 100%;
+}
+
+.workImg img {
+	width: 100%;
+}
+
+.overlay {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.overlayText {
+	position: absolute;
+	top: 42%;
+	left: 47%;
+	margin-left: -100px;
+	width: 200px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	padding: 3%;
+	color: #000000;
+	border-radius: 6px;
+	background-color: rgba(65,65,65, .75);
+}
+
+.workLink:hover > .overlay {
+	display: block;
+}
+
+.workInfo {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	text-align: right;
+	line-height: 1.4em;
+	font-size: 17px;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0 6% 0 2%;
+}
+
+.workInfo span {
+	font-size: 20px;
+}
+
+.workInfo h4 {
+	display: block;
+	height: 10px;
+	width: 30%;
+	float: right;
+	margin: 0 0 0 50%;
+	background-color: #414141;
+}
+
+.workInfo h3 {
+	font-size: 26px;
+}
+
+.workInfo a {
+	color: #4c3d6d;
+}
+
+/* --- END WORK --- */
+/* --- WORK NAV DIV --- */
+
+#workFunction {
+	position: relative;
+	border-radius: 0 0 5px 5px;
+	padding: 1% 0 2% 0;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+#left {
+	display: inline-block;
+	float: left;
+	width: 40px;
+	margin-left: 3%;
+}
+
+
+#right {
+	display: inline-block;
+	float: right;
+	width: 40px;
+	margin-right: 3%;
+}
+
+#circles {
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	bottom: 20%;
+	margin-left: -50px;
+}
+
+.shaded {
+	display: inline-block;
+	opacity: 1;
+	width: 15px;
+	margin-right: 7%;
+}
+
+.unshaded {
+	display: inline-block;
+	opacity: .5;
+	width: 15px;
+	margin-right: 7%;
+}
+
+/* --- END WORK NAV ---*/
+
+
+/* --- CONTACT block Styling --- */
 
 #contact {
-	background-color: #727373;
-	height: 60vh;
+	background-color: #414141;
+	color: #F9EEE1;
+	overflow: hidden;
 }
 
 #contactLeft {
 	display: inline-block;
 	width: 55%;
-}
-
-#contactLeft p {
-	display: block;
-	margin: auto;
-	padding: 0 8%;
-	font-size: 18px;
-	line-height: 1.4em;
 }
 
 #contact h2 {
@@ -148,67 +579,162 @@ body {
 	color: #F9EEE1;
 }
 
+.contactInfo {
+	display: block;
+	margin: auto;
+	padding: 0 8%;
+	font-size: 17px;
+	line-height: 1.4em;
+}
+
+#address {
+	font-size: 19px;
+	margin-top: 7%;
+}
+
 #socials {
 	display: inline-block;
 	width: 45%;
-	height: 90%;
 	float: right;
 	padding: 5% 0;
 }
 
-.social {
-	display: block;
-	width: 100%;
-	height: 15%;
-	margin-bottom: 3%;
-}
-
-.social a {
+#socials a {
 	text-decoration: none;
-	color: BLACK;
+	color: #F9EEE1;
 }
 
-.social span {
-	padding-left: 10px;
-	font-size: 17px;
+.hvr-rectangle-in span {
+	padding-left: 6%;
+	font-size: 16px;
 	line-height: 200%;
 }
 
 .contactIcon {
 	display: inline-block;
 	vertical-align: middle;
-	max-height: 75%;
-	max-width: 100%;
+	width: 20%;
 
+}
+
+/* Rectangle In 
+ * Author: Ian Lunn @IanLunn
+ * Github: https://github.com/IanLunn/Hover
+ * Modified by me
+ *
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+*/
+#githubDiv {
+	background: #ff9933;
+}
+
+#facebookDiv {
+	background: #3b5998;
+}
+
+#linkedinDiv {
+	background: #0077b5;
+}
+
+.hvr-rectangle-in {
+  display: block;
+  padding: 2% 5%;
+  width: 62%;
+  border-radius: 8px;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #09894B;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-rectangle-in:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #414141;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-in:hover, .hvr-rectangle-in:focus, .hvr-rectangle-in:active {
+  color: white;
+}
+.hvr-rectangle-in:hover:before, .hvr-rectangle-in:focus:before, .hvr-rectangle-in:active:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 
 
 /* END CONTACT block Styling */
 
-#about {
-	background-color: #727373;
-}
 
-
-
-/* Footer css */
+/* Footer Styling */
 footer {
 	display: inline-block;
-	float: right;
-	width: 68%;
-
+	width: 100%;
+	line-height: 1.6em;
+	margin: 2% 0;
 }
 
-footer span {
+#firstP {
 	display: inline-block;
-	width: 100%;
-	height: 10vh;
-	vertical-align: bottom;
+	margin: 0 5% 0 0;
+
 }
 
 footer p {
 	display: inline-block;
-	padding-left: 4%;
-	margin-bottom: 0;
-	vertical-align: bottom;
+	margin: 0;
+}
+
+/*End FOOTER */
+
+/* Grow 
+ * Author: Ian Lunn @IanLunn
+ * Github: https://github.com/IanLunn/Hover
+ * Modified by me
+ *
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+*/
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hvr-grow:focus {
+	outline: 0;
 }
