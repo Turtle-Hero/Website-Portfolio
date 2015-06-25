@@ -5,11 +5,17 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Trevor Warner's Portfolio Website">
 		<meta name="author" content="Trevor Warner">
-		<link rel="stylesheet" type="text/css" href="stylesheets/Style.css">
+		<link rel="stylesheet" type="text/css" href="Style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
    		<!--[if lt IE 9]>
     	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     	<![endif]-->
+
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<script src="dynamicJS.js"></script>
 	</head>
 
 	<body>
@@ -17,104 +23,341 @@
 			<div id="dashboard">
 
 				<div id="logoContainer">
-				<img id="logo" src="https://cloud.githubusercontent.com/assets/8756331/8099627/6ec86340-0fc5-11e5-914b-7455bd206a79.png" alt="Logo of turtle with TW half in the shell">
+				<img id="logo" src="myLogo.png" alt="Logo of turtle with TW half in the shell">
 				</div>
 
 				<div class="dashMenu">
-					<div class="dashImg">
-						<img class="menuItem" src="https://cloud.githubusercontent.com/assets/8756331/8099637/84a83cda-0fc5-11e5-8482-27066be475a6.png" alt="dark circle with light portrait figure">
-					</div>
-					<span class="menuText"> About </span>
+					<a id="aboutLink" href="" >
+						<img class="hvr-float" src="about.png" alt="dark circle with light portrait figure">
+						<img class="hidden" src="aboutHover.png">				
+					<span class="hvr-underline-from-center"> About </span>
+					</a>
 				</div>
 
 				<div class="dashMenu">
-					<div class="dashImg">
-						<img class="menuItem" src="https://cloud.githubusercontent.com/assets/8756331/8099633/807ca510-0fc5-11e5-8cec-4562b166a98a.png" alt="computer symbol">
-					</div>
-					<span class="menuText"> Work </span>
+					<a id="workLink" href="" address="true">
+					
+						<img class="hvr-float" src="work.png" alt="computer symbol">
+						<img class="hidden" src="workHover.png">
+					<span class="hvr-underline-from-center"> Work </span>
+					</a>
 				</div>
 
 				<div class="dashMenu">
-					<div class="dashImg">
-						<img class="menuItem" src="https://cloud.githubusercontent.com/assets/8756331/8099638/84a8625a-0fc5-11e5-8e55-a0ce8c22f9ea.png" alt="envelope symbol">
-					</div>
-					<span class="menuText"> Contact </span>
+					<a id="contactLink" href="" address="true">
+					
+						<img class="hvr-float" src="contactClear.png" alt="envelope symbol">
+						<img class="hidden" src="contactHover.png">
+					<span class="hvr-underline-from-center"> Contact </span>
+					</a>
 				</div>
 
 			</div>
+
+			<div id="rightContainer">
 
 			<div id="intro" class="contentBlock">
 				<div id="introLeft">
 					<h1></h1>
 					
-						<img id="trevPic" src="https://cloud.githubusercontent.com/assets/8756331/8099631/7cc8cf3e-0fc5-11e5-8577-82ca94b019da.jpg" alt="Picture of Trevor Warner in a suit">
+						<img id="trevPic" src="ProfPic.jpg" alt="Picture of Trevor Warner in a suit">
 					
 					<h1></h1>
 				</div> 
 				<div id="introRight">
-				<p> My name is Trevor Warner and I am a web developer! I am very passionate for web development and I find it to really be a beautiful union 		between code and design &mdash; The only limit is your creativity and imagination!
+				<p> My name is Trevor Warner and I am a web developer! I am very passionate for web development and I find it to really be a beautiful union between code and design &mdash; The only limit is your creativity and imagination!
 					<br>
 					<br>
 					<br>
-					Outside of web development I enjoy playing tennis, card games, working out, going to the movies, and video games. I love animals (especially turtles) and plan on having many pets in the future!
+					Outside of web development I enjoy playing tennis, card games, working out, going to the movies, and video games. I love animals (especially turtles) and plan on having many pets in the future.
 				</p>
 				</div>
-			</div> <!-- End intro block -->
+			</div> <!-- End INTRO -->
 
+			<!-- ABOUT -->
 			<div id="about" class="contentBlock">
-				This is a test to see if the color of the div is light or dark enough to read the text.
+				
+				<div id="experience">
+					<div id="expLeft" class="expBlocks">
+						<h3>About Me</h3>
+						<p>
+							I graduated from Augustana College in May of 2015 with a Bachelor of Arts degree in Computer Science. I learned key Computer Science concepts over a very broad range of topics. I gained experience developing and designing websites for the Art History deparment, while taking some graphic design classes. This is when I found something I could create from two fields I felt passionate for.
+						</p>
 
+					</div>
+
+					
+						<div class="expBlocks">
+					<h3>About my Website</h3>
+
+					<p>
+						This site was hand crafted from the ground up. I made all the images in a vector graphics program called Inkscape. The 
+						responsive design of the website is all done in CSS3, and the interactivity is a combination of JQuery and CSS3.
+					</p>
+					</div>
+
+					<div id="bookDiv">
+						<div id="bookLeft">
+							<h1> Experience </h1>
+						</div>
+						<div id="bookRight">
+						<img id="bookImg" src="book.png" alt="Image of Book">
+						</div>
+					</div>
+					
+				</div>
+
+				<div id="tableContainer">
+				<table id="skills">
+					<tr>
+						<th class="colHeader">				
+						</th>
+						<th class="colHeader"> Beginner 	</th>
+						<th class="colHeader"> Familiar 	</th>
+						<th class="colHeader"> Proficient 	</th>
+						<th class="colHeader"> Expert 		</th>
+					</tr>
+					<tr class="rowHeader">
+						<th> HTML5 </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> CSS3 </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> Java </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> Photoshop </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="unfilled"></td>
+					</tr>
+
+					<tr class="rowHeader">
+						<th> JavaScript </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="progress"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> JQuery </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="progress"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> SQL </th>
+						<td class="filled"></td>
+						<td class="filled"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> PHP </th>
+						<td class="progress"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> AngularJS </th>
+						<td class="progress"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+					</tr>
+					<tr class="rowHeader">
+						<th> Bootstrap </th>
+						<td class="progress"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+						<td class="unfilled"></td>
+					</tr>
+
+				</table>
+
+				<table id="key">
+					<tr><th> <h3>Key</h3> </th></tr>
+					<tr><td height="15"></td></tr>
+					<tr><td class="filled" height="20"> </td></tr>
+					<tr><td> Current Skill </td></tr>
+					<tr><td height="15"></td></tr>
+					<tr><td class="progress" height="20"> </td></tr>
+					<tr><td> In Progress </td></tr>
+					<tr><td height="15"></td></tr>
+					<tr><td class="unfilled" height="20"> </td></tr>
+					<tr><td> No Skill </td></tr>
+
+				</table>
 			</div>
 
-			<div id="portfolio" class="contentBlock">
 
+				<div id="future">
+					<img id="rocket" src="rocket.png" alt="rocket ship">
+					<h3> Future Goals </h3>
+					<p class="future-P"> I am always looking to better myself and expand my knowledge of anything Computer Science related, but most of all in web development. I am in the process of learning:<br></p>
+						<ul>
+							<li>AngularJS - which looks to be a powerful javascript tool to build dynamic web apps</li>
+							<li>PHP - server-side html to connect websites to servers</li>
+							<li>Bootstrap - a template for easy design and development for responsive websites</li>
+						</ul>
+					<p id="lastFuture" class="future-P">
+						I also look to continue Android app development! I hope to be updating <a class="hvr-grow" href="https://play.google.com/store/apps/details?id=edu.augustana.javaturtles.sketchsend">Sketch Send</a>, an app my team the Java Turtles created, along with getting 'Brick Bash', another app my team created on the Google Play Store. 
+					</p>
+				</div>
+
+			</div> <!-- End ABOUT -->
+
+			<!-- WORK -->
+			<div id="work" class="contentBlock">
+
+				<div id="scrollContainer">
+						<div  class="workItem">
+							<div id="nocturneWork" class="workImg">
+								<a class="workLink" href="nocturnejournal.org/Articles/ScholarArticle.html">
+								<img src="nocturne.png" alt="screenshot of nocturnejournal.org">
+								<div class="overlay">
+									<img src="workOverlay.png" alt="somewhat transparent grey overlay">
+									<span class="overlayText"> Click to View Live </span>
+								</div>
+								</a>
+							</div>
+							<div class="workInfo">
+								<h4> </h4>
+								<h3> Nocturne Journal</h3>
+								<span> Company: Augustana<br> Art History Department </span>
+								<p> This site is responsive and was made for articles of Whistler's Criticism. I wanted to keep the feel of a book, while making the site more interactive with scroll arrows and a page count. The articles are still being written, so all of the text are placeholders, and the home page/table of contents is un-linked from the articles page until everything is ready.
+								</p>						
+							</div>
+
+						</div>
+
+
+						<div id="galleryWork" class="workItem">
+							<div class="workImg">
+								<a class="workLink" href="augustana.edu/academics/arthistory/AGES">
+								<img src="webGallery.png" alt="screenshot of Augustana's AGES web gallery">
+								<div class="overlay">
+									<img src="workOverlay.png" alt="somewhat transparent grey overlay">
+									<span class="overlayText"> Click to View Live </span>
+								</div>
+								</a>
+							</div>
+							<div class="workInfo">
+								<h4> </h4>
+								<h3> Web Gallery</h3>
+								<span> Company: Augustana<br> Art History Department </span>
+								<p> This was my very first website! The goal for this one was to take a book and transform it into a website. It originally was an old auto-generated site. I replaced a lot of deprecated code, added essays to each item, and made the site responsive. I used JQuery to anchor the thumbnail image scroller to the bottom of the page, along with highlighting what page you are currently on.
+								</p>
+
+							</div>
+						</div>
+
+
+						<div id="centreWork" class="workItem">
+							<div class="workImg">
+								<a class="workLink" href="augustana.edu/academics/arthistory/centre_for_whistler_criticism">
+								<img src="centreWhistler.png" alt="screenshot of the Centre for Whistler Criticism home page">
+								<div class="overlay">
+									<img src="workOverlay.png" alt="somewhat transparent grey overlay">
+									<span class="overlayText"> Click to View Live </span>
+								</div>
+								</a>
+							</div>
+							<div class="workInfo">
+								<h4> </h4>
+								<h3> Centre for Whistler Criticism</h3>
+								<span> Company: Augustana<br> Art History Department </span>
+								<p> This was the last website I did for the Art History Department. It is very simple static page, and is eventually meant to be the homepage to the Centre for Whistler Criticism database. I started this with very little time left in the school year, so I didn't have a chance to make it responsive.
+								</p>
+
+							</div>
+						</div>		
+
+				</div> <!-- end scrollContainer div -->
+
+			</div> <!-- End WORK -->
+
+			<!-- Work NAV -->
+			<div id="workFunction" class="contentBlock">
+				<input type="image" id="left" class="hvr-grow" src="left.png" />
+				<div id="circles">
+					<img id="one" class="shaded" src="circle.png" alt="image of circle"/>
+					<img id="two" class="unshaded" src="circle.png" alt="image of circle"/>
+					<img id="three" class="unshaded" src="circle.png" alt="image of circle"/>
+				</div>
+				<input type="image" id="right" class="hvr-grow" src="right.png" />
 			</div>
+			<!-- End Work NAV -->
 
+			<!-- CONTACT -->
 			<div id="contact" class="contentBlock">
 				<div id="contactLeft">
 					<h2> Contact Me!</h2>
-					<p> If you want to know more about any of my work, would like my services in a project, or just want to say hello, I would love to hear from you!
+					<p class="contactInfo"> If you want to know more about any of my work, would like my services in a project, or just want to say hello, I would love to hear from you!
+					</p>
+					<p id="address" class="contactInfo">
+						Trevor Warner <br>
+						Lake Zurich, IL 60047
 					</p>
 				</div>
 
 				<div id="socials">
 
-					<div class="social">
-						<img id="phone" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8099640/84aaec32-0fc5-11e5-92f0-2c32f21d5b24.png" alt="phone symbol">
+					<div class="hvr-rectangle-in">
+						<img id="phone" class="contactIcon" src="contPhone2.png" alt="phone symbol">
 						<span> +(224) 634-7009</span>
 					</div>
 
-					<div class="social">
-						<img id="email" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8099635/849c04c4-0fc5-11e5-8d0c-0174e696f2c4.png" alt="email symbol">
+					<div class="hvr-rectangle-in">
+						<img id="email" class="contactIcon" src="contEmail2.png" alt="email symbol">
 						<span> twarner714@gmail.com </span>
 					</div>
 
-					<div class="social">
-						<img id="github" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8099639/84a997ec-0fc5-11e5-85dd-711730d45a80.png" alt="github logo">
-						<span> <a href="github.com/Tyrtle"> github.com/Tyrtle </a> </span>
+					<a href="github.com/Tyrtle">
+					<div id="githubDiv" class="hvr-rectangle-in">	
+						<img id="github" class="contactIcon" src="githubLogo2.png" alt="github logo">
+						<span> github.com/Tyrtle </span>
 					</div>
+					</a>
 
-					<div class="social">
-						<img id="facebook" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8099641/8ade8d02-0fc5-11e5-8e6f-d0ac4af1a899.png" alt="facebook logo">
-						<span> <a href="facebook.com/trevor.warner.750"> Follow me on Facebook </a> </span>
+					<a href="facebook.com/trevor.warner.750">
+					<div id="facebookDiv" class="hvr-rectangle-in">
+						<img id="facebook" class="contactIcon" src="contFacebook2.png" alt="facebook logo">
+						<span> Contact me on Facebook </span>
 					</div>
+					</a>
 					
-					<div class="social">
-						<img id="linkedin" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8099636/84a7d650-0fc5-11e5-9b9d-dbe202b0b673.png" alt="linkedin logo">
-						<span> <a href="linkedin.com/pub/trevor-warner/64/7b7/536"> Follow me on Linkedin </a> </span>
+					<a href="linkedin.com/pub/trevor-warner/64/7b7/536">
+					<div id="linkedinDiv" class="hvr-rectangle-in">
+						<img id="linkedin" class="contactIcon" src="contLinkedin2.png" alt="linkedin logo">
+						<span> Contact me on Linkedin </span>
 					</div>
+					</a>
 
+				</div> <!-- End socials div -->
 
-
-				</div>
-
-			</div>
+			</div> <!-- End CONTACT -->
 
 			<footer>
-				<span> © 2015 Trevor Warner <p> Hosted by Namecheap | Powered by Github | Made by Trevor Warner </p> </span>
-
+				<p id="firstP"> © 2015 Trevor Warner</p> <p> Hosted by Namecheap |</p> <p> Powered by Github |</p> <p> Made by Trevor Warner </p>
 			</footer>
-
+		</div>
 		</div> <!-- ends container div -->
 	</body>
 
