@@ -55,13 +55,6 @@ body {
 	vertical-align: middle;
 }
 
-.hidden {
-	display: none;
-}
-
-
-
-
 /* Float 
  * Author: Ian Lunn @IanLunn
  * Github: https://github.com/IanLunn/Hover
@@ -102,21 +95,21 @@ body {
 }
 
 #aboutLink:hover > .hvr-float {
+	background-color: #F9EEE1;
 	-webkit-transform: translateY(-12px);
 	transform: translateY(-12px);
-  	content: url('https://cloud.githubusercontent.com/assets/8756331/8347804/6a79c458-1ad0-11e5-814e-9b08f004f4f4.png');
 }
 
 #workLink:hover > .hvr-float {
+	background-color: #F9EEE1;
 	-webkit-transform: translateY(-12px);
 	transform: translateY(-12px);
-	content: url('https://cloud.githubusercontent.com/assets/8756331/8347801/6485cd58-1ad0-11e5-8b9c-2a5a987b9e22.png');
 }
 
 #contactLink:hover > .hvr-float {
+	background-color: #F9EEE1;
 	-webkit-transform: translateY(-12px);
 	transform: translateY(-12px);
-	content: url('https://cloud.githubusercontent.com/assets/8756331/8347795/5d07ac54-1ad0-11e5-90a0-cc0f4a4fee44.png');
 }
 
 
