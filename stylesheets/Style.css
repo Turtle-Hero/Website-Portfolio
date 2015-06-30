@@ -12,7 +12,6 @@ body {
 #dashboard {
 	display: inline-block;
 	position: fixed;
-	float: left;
 	width: 25%;
 	height: 100vh;
 	background-color: #09894B;
@@ -190,11 +189,11 @@ body {
 
 #introRight {
 	display: inline-block;
-	float: right;
 	margin-top: 10%;
-	width: 55%;
+	width: 54%;
 	font-size: 19px;
 	line-height: 1.4em;
+	vertical-align: top;
 }
 
 .intro-P {
@@ -941,7 +940,6 @@ footer p {
 		display: block;
 		width: 100%;
 		height: auto;
-		float: none;
 		z-index: 100;
 		border-style: inherit;
 		border: solid;
@@ -1133,7 +1131,6 @@ footer p {
 		display: block;
 		width: 100%;
 		height: auto;
-		float: none;
 		z-index: 100;
 		border-style: inherit;
 		border: solid;
@@ -1192,7 +1189,6 @@ footer p {
 	
 	#introRight {
 		display: block;
-		float: none;
 		margin: 6% auto;
 		font-size: 16px;
 		width: 86%;
@@ -1386,7 +1382,6 @@ footer p {
 		display: block;
 		width: 100%;
 		height: auto;
-		float: none;
 		z-index: 100;
 		border-style: inherit;
 		border: solid;
@@ -1460,7 +1455,6 @@ footer p {
 	
 	#introRight {
 		display: block;
-		float: none;
 		margin: 10% auto;
 		font-size: 13px;
 		width: 90%;
