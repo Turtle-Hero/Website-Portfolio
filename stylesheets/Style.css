@@ -551,7 +551,7 @@ body {
 
 #contactLeft {
 	display: inline-block;
-	width: 55%;
+	width: 54%;
 }
 
 #contact h2 {
@@ -577,7 +577,6 @@ body {
 #socials {
 	display: inline-block;
 	width: 45%;
-	float: right;
 	padding: 5% 0;
 }
 
@@ -1344,7 +1343,6 @@ footer p {
 	#socials {
 		display: block;
 		width: 100%;
-		float: none;
 	}
 	
 	.hvr-rectangle-in {
@@ -1626,7 +1624,6 @@ footer p {
 	#socials {
 		display: block;
 		width: 100%;
-		float: none;
 	}
 	
 	.contactIcon {
