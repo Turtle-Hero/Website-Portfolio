@@ -552,6 +552,7 @@ body {
 #contactLeft {
 	display: inline-block;
 	width: 54%;
+	vertical-align: top;
 }
 
 #contact h2 {
