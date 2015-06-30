@@ -5,7 +5,8 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="Trevor Warner's Portfolio Website">
 		<meta name="author" content="Trevor Warner">
-		<link rel="stylesheet" type="text/css" href="stylesheets/Style.css">
+		<meta name="tags" content="Trevor, Warner, Portfolio Website, Trevor Warner, Web Developer">
+		<link rel="stylesheet" type="text/css" href="Style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
    		<!--[if lt IE 9]>
     		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +16,7 @@
 		<!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 		<![endif]-->
-		<script src="javascripts/dynamicJS.js"></script>
+		<script src="dynamicJS.js"></script>
 		
 		<link rel="shortcut icon" type="image/png" href="https://cloud.githubusercontent.com/assets/8756331/8347808/764c35d6-1ad0-11e5-8936-19d605af6f35.png" >
 		<link rel="icon" type="image/png" href="https://cloud.githubusercontent.com/assets/8756331/8347808/764c35d6-1ad0-11e5-8936-19d605af6f35.png" >
@@ -31,7 +32,7 @@
 
 				<div class="dashMenu">
 					<a id="aboutLink" href="" >
-						<img class="hvr-float" src="https://cloud.githubusercontent.com/assets/8756331/8360934/8522d532-1b35-11e5-961b-7530396048a9.png" alt="dark circle with light portrait figure">
+						<img class="hvr-float" src="https://cloud.githubusercontent.com/assets/8756331/8360934/8522d532-1b35-11e5-961b-7530396048a9.png" alt="dark circle with light portrait figure">		
 					<span class="hvr-underline-from-center"> About </span>
 					</a>
 				</div>
@@ -44,7 +45,7 @@
 				</div>
 
 				<div class="dashMenu">
-					<a id="contactLink" href="" address="true">
+					<a id="contactLink" href="" address="true">					
 						<img class="hvr-float" src="https://cloud.githubusercontent.com/assets/8756331/8360938/89cddc94-1b35-11e5-86b3-fd83f98a30fb.png" alt="envelope symbol">
 					<span class="hvr-underline-from-center"> Contact </span>
 					</a>
@@ -63,12 +64,13 @@
 					<h1></h1>
 				</div> 
 				<div id="introRight">
-				<p> My name is Trevor Warner and I am a web developer! I am very passionate for web development and I find it to really be a beautiful union between code and design &mdash; The only limit is your creativity and imagination!
-					<br>
-					<br>
-					<br>
+				<p class="intro-P"> My name is Trevor Warner and I am a web developer! I am very passionate for web development and I find it to really be a beautiful union between code and design &mdash; The only limit is your creativity and imagination!
+				</p>
+					
+				<p class="intro-P">
 					Outside of web development I enjoy playing tennis, card games, working out, going to the movies, and video games. I love animals (especially turtles) and plan on having many pets in the future.
 				</p>
+
 				</div>
 			</div> <!-- End INTRO -->
 
@@ -106,6 +108,18 @@
 				</div>
 
 				<div id="tableContainer">
+
+					<table id="columns">
+						<tr>
+							<th></th>
+							<th>Beginner</th>
+							<th>Familiar</th>
+							<th>Proficient</th>
+							<th>Expert</th>
+						</tr>
+					</table>
+
+
 				<table id="skills">
 					<tr>
 						<th class="colHeader">				
@@ -202,6 +216,26 @@
 					<tr><td> No Skill </td></tr>
 
 				</table>
+
+				<table id="keyHor">
+					<caption> Key </caption>
+					
+					<tr>
+						<td class="filled" height="20"> </td>
+						<td class="scale"></td>						
+						<td class="progress" height="20"> </td>
+						<td class="scale"></td>
+						<td class="unfilled" height="20"> </td>
+					</tr>
+					<tr>
+						<td> Current Skill </td>
+						<td class="scale"></td>
+						<td> In Progress </td>
+						<td class="scale"></td>
+						<td> No Skill </td>
+						
+					</tr>
+				</table>
 			</div>
 
 
@@ -226,8 +260,8 @@
 
 				<div id="scrollContainer">
 						<div  class="workItem">
-							<div id="nocturneWork" class="workImg">
-								<a class="workLink" href="http://nocturnejournal.org/Articles/ScholarArticle.html">
+							<div class="workImg">
+								<a class="workLink" href="nocturnejournal.org/Articles/ScholarArticle.html">
 								<img src="https://cloud.githubusercontent.com/assets/8756331/8347777/26794724-1ad0-11e5-92f7-842bfd7086f7.png" alt="screenshot of nocturnejournal.org">
 								<div class="overlay">
 									<img src="https://cloud.githubusercontent.com/assets/8756331/8347779/2a9a85d4-1ad0-11e5-98e4-99709364e576.png" alt="somewhat transparent grey overlay">
@@ -238,7 +272,7 @@
 							<div class="workInfo">
 								<h4> </h4>
 								<h3> Nocturne Journal</h3>
-								<span> Company: Augustana<br> Art History Department </span>
+								<span> Company: Augustana Art History Department </span>
 								<p> This site is responsive and was made for articles of Whistler's Criticism. I wanted to keep the feel of a book, while making the site more interactive with scroll arrows and a page count. The articles are still being written, so all of the text are placeholders, and the home page/table of contents is un-linked from the articles page until everything is ready.
 								</p>						
 							</div>
@@ -246,9 +280,9 @@
 						</div>
 
 
-						<div id="galleryWork" class="workItem">
+						<div class="workItem">
 							<div class="workImg">
-								<a class="workLink" href="http://augustana.edu/academics/arthistory/AGES">
+								<a class="workLink" href="augustana.edu/academics/arthistory/AGES">
 								<img src="https://cloud.githubusercontent.com/assets/8756331/8347775/231c097c-1ad0-11e5-9bf7-a0f25e097046.png" alt="screenshot of Augustana's AGES web gallery">
 								<div class="overlay">
 									<img src="https://cloud.githubusercontent.com/assets/8756331/8347779/2a9a85d4-1ad0-11e5-98e4-99709364e576.png" alt="somewhat transparent grey overlay">
@@ -259,7 +293,7 @@
 							<div class="workInfo">
 								<h4> </h4>
 								<h3> Web Gallery</h3>
-								<span> Company: Augustana<br> Art History Department </span>
+								<span> Company: Augustana Art History Department </span>
 								<p> This was my very first website! The goal for this one was to take a book and transform it into a website. It originally was an old auto-generated site. I replaced a lot of deprecated code, added essays to each item, and made the site responsive. I used JQuery to anchor the thumbnail image scroller to the bottom of the page, along with highlighting what page you are currently on.
 								</p>
 
@@ -267,9 +301,9 @@
 						</div>
 
 
-						<div id="centreWork" class="workItem">
+						<div class="workItem">
 							<div class="workImg">
-								<a class="workLink" href="http://augustana.edu/academics/arthistory/centre_for_whistler_criticism">
+								<a class="workLink" href="augustana.edu/academics/arthistory/centre_for_whistler_criticism">
 								<img src="https://cloud.githubusercontent.com/assets/8756331/8347772/1cf888f4-1ad0-11e5-8396-546d83ec2b34.png" alt="screenshot of the Centre for Whistler Criticism home page">
 								<div class="overlay">
 									<img src="https://cloud.githubusercontent.com/assets/8756331/8347779/2a9a85d4-1ad0-11e5-98e4-99709364e576.png" alt="somewhat transparent grey overlay">
@@ -280,7 +314,7 @@
 							<div class="workInfo">
 								<h4> </h4>
 								<h3> Centre for Whistler Criticism</h3>
-								<span> Company: Augustana<br> Art History Department </span>
+								<span> Company: Augustana Art History Department </span>
 								<p> This was the last website I did for the Art History Department. It is very simple static page, and is eventually meant to be the homepage to the Centre for Whistler Criticism database. I started this with very little time left in the school year, so I didn't have a chance to make it responsive.
 								</p>
 
@@ -327,21 +361,21 @@
 						<span> twarner714@gmail.com </span>
 					</div>
 
-					<a href="http://github.com/Tyrtle">
+					<a href="github.com/Tyrtle">
 					<div id="githubDiv" class="hvr-rectangle-in">	
 						<img id="github" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8347754/e52812dc-1acf-11e5-8e70-e60f6e21cf71.png" alt="github logo">
 						<span> github.com/Tyrtle </span>
 					</div>
 					</a>
 
-					<a href="http://facebook.com/trevor.warner.750">
+					<a href="facebook.com/trevor.warner.750">
 					<div id="facebookDiv" class="hvr-rectangle-in">
 						<img id="facebook" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8347750/dc5584b4-1acf-11e5-96ea-e253e63d8a53.png" alt="facebook logo">
 						<span> Contact me on Facebook </span>
 					</div>
 					</a>
 					
-					<a href="http://linkedin.com/pub/trevor-warner/64/7b7/536">
+					<a href="linkedin.com/pub/trevor-warner/64/7b7/536">
 					<div id="linkedinDiv" class="hvr-rectangle-in">
 						<img id="linkedin" class="contactIcon" src="https://cloud.githubusercontent.com/assets/8756331/8347742/c5b329dc-1acf-11e5-8c76-34aa48949440.png" alt="linkedin logo">
 						<span> Contact me on Linkedin </span>
