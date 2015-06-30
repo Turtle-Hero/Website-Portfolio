@@ -21,13 +21,11 @@ body {
 	border-color: #4C4C4C;
 	border-image:
 		linear-gradient(to right, #414141, #585858) 1 100%;
-	
 }
 
 #logoContainer {
 	display: block;
 	width: 80%;
-	margin: auto;
 	margin: 5% auto 10% auto;
 }
 
@@ -48,10 +46,119 @@ body {
 	color: #000000;
 }
 
+/* Float 
+* Author: Ian Lunn @IanLunn
+* Github: https://github.com/IanLunn/Hover
+* Made available under a MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+* Modified by me
+*/
+.hvr-float {
+  display: inline-block;
+  width: 30%;
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#aboutLink:hover {
+	color: #F9EEE1;
+}
+
+#workLink:hover {
+	color: #F9EEE1;
+}
+
+#contactLink:hover {
+	color: #F9EEE1;
+}
+
+#aboutLink:hover > .hvr-float {
+	background-color: #F9EEE1;
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+}
+
+#workLink:hover > .hvr-float {
+	background-color: #F9EEE1;
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+}
+
+#contactLink:hover > .hvr-float {
+	background-color: #F9EEE1;
+	-webkit-transform: translateY(-12px);
+	transform: translateY(-12px);
+}
+
+/* Underline From Center 
+* Author: Ian Lunn @IanLunn
+* Github: https://github.com/IanLunn/Hover
+* Made available under a MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+* Modified by me
+*/
+.hvr-underline-from-center {
+	display: inline-block;
+ 	margin-left: 7%;
+	padding: 0 3%;
+	font-size: 32px;
+ 	vertical-align: bottom;
+ -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #F9EEE1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#aboutLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
+
+#workLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
+
+#contactLink:hover > .hvr-underline-from-center:before {
+	left: 0;
+	right: 0;	 
+}
 
 /* --- END DASHBOARD Styling --- */
 
-/*general block styling for each section */
+/* General Block Styling */
 #rightContainer {
 	display: block;
 	float: right;
@@ -66,11 +173,10 @@ body {
 	border-radius: 5px;
 	background-color: #F9EEE1;	
 }
+/* --- End General Styling --- */
 
-/* --- end general block styling --- */
 
-
-/* INTRO block Styling */
+/* INTRO Block Styling */
 #intro {
 	height: 90vh;
 }
@@ -114,10 +220,9 @@ body {
 	border-color: #4C4C4C;
 	border-width: 2px;
 }
-/* End INTRO block Styling */
+/* End INTRO Block Styling */
 
-/* ABOUT block Styling */
-
+/* ABOUT Block Styling */
 #about {
 	background-color: #414141;
 	color: #F9EEE1;
@@ -147,7 +252,7 @@ body {
 	font-size: 28px;
 	width: 100%;
 	height: 20%;
-	margin: 0 auto 0 auto;
+	margin: 0 auto;
 }
 
 #bookDiv {
@@ -282,7 +387,6 @@ body {
 	margin-top: 0;
 }
 
-
 #lastFuture a {
 	color: #F9EEE1;
 	text-decoration: none;
@@ -299,17 +403,12 @@ body {
 	width: 12%;
 	vertical-align: middle;
 }
-
-
 /* --- END ABOUT --- */
 
 
-
-/* --- WORK block Styling --- */
-
+/* --- WORK Block Styling --- */
 #work {
 	position: relative;
-	
 	font-size: 17px;
 	border-radius: 5px 5px 0 0;
 	overflow: hidden;
@@ -363,6 +462,7 @@ body {
 .workLink:hover > .overlay {
 	display: block;
 }
+
 .workInfo h4 {
 	display: block;
 	height: 10px;
@@ -390,10 +490,9 @@ body {
 	font-style: normal;
 	margin-left: 3.5%;
 }
-
 /* --- END WORK --- */
-/* --- WORK NAV DIV --- */
 
+/* --- WORK NAV DIV --- */
 #workFunction {
 	position: relative;
 	border-radius: 0 0 5px 5px;
@@ -498,48 +597,15 @@ body {
 	display: inline-block;
 	vertical-align: middle;
 	width: 18%;
-
 }
 
-/* END CONTACT block Styling */
-
-
-/* Footer Styling */
-footer {
-	display: inline-block;
-	width: 100%;
-	line-height: 1.6em;
-	margin: 2% 0;
-}
-
-#firstP {
-	display: inline-block;
-	margin: 0 5% 0 0;
-
-}
-
-footer p {
-	display: inline-block;
-	margin: 0;
-}
-
-/*End FOOTER */
-
-/* STYLING EFFECTS */
-
-/* Rectangle In */
-#githubDiv {
-	background: #ff9933;
-}
-
-#facebookDiv {
-	background: #3b5998;
-}
-
-#linkedinDiv {
-	background: #0077b5;
-}
-
+/* Rectangle in 
+* Author: Ian Lunn @IanLunn
+* Github: https://github.com/IanLunn/Hover
+* Made available under a MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+* Modified by me
+*/
 .hvr-rectangle-in {
   display: block;
   padding: 2%;
@@ -577,6 +643,19 @@ footer p {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
+#githubDiv {
+	background: #ff9933;
+}
+
+#facebookDiv {
+	background: #3b5998;
+}
+
+#linkedinDiv {
+	background: #0077b5;
+}
+
 .hvr-rectangle-in:hover, .hvr-rectangle-in:focus, .hvr-rectangle-in:active {
   color: white;
 }
@@ -584,108 +663,35 @@ footer p {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
+/* END CONTACT block Styling */
 
-#aboutLink:hover {
-	color: #F9EEE1;
-}
-
-#workLink:hover {
-	color: #F9EEE1;
-}
-
-#contactLink:hover {
-	color: #F9EEE1;
-}
-
-
-/* Float */
-.hvr-float {
-  display: inline-block;
-  width: 30%;
-  max-width: 100%;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-#aboutLink:hover > .hvr-float {
-	background-color: #F9EEE1;
-	-webkit-transform: translateY(-12px);
-	transform: translateY(-12px);
-}
-
-#workLink:hover > .hvr-float {
-	background-color: #F9EEE1;
-	-webkit-transform: translateY(-12px);
-	transform: translateY(-12px);
-}
-
-#contactLink:hover > .hvr-float {
-	background-color: #F9EEE1;
-	-webkit-transform: translateY(-12px);
-	transform: translateY(-12px);
-}
-
-
-/* Underline From Center */
-.hvr-underline-from-center {
+/* Footer Styling */
+footer {
 	display: inline-block;
- 	margin-left: 7%;
-	padding: 0 3%;
-	font-size: 32px;
- 	vertical-align: bottom;
- -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden;
-}
-.hvr-underline-from-center:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  background: #F9EEE1;
-  height: 4px;
-  -webkit-transition-property: left, right;
-  transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+	width: 100%;
+	line-height: 1.6em;
+	margin: 2% 0;
 }
 
-#aboutLink:hover > .hvr-underline-from-center:before {
-	left: 0;
-	right: 0;	 
+#firstP {
+	display: inline-block;
+	margin: 0 5% 0 0;
 }
 
-#workLink:hover > .hvr-underline-from-center:before {
-	left: 0;
-	right: 0;	 
+footer p {
+	display: inline-block;
+	margin: 0;
 }
+/*End FOOTER */
 
-#contactLink:hover > .hvr-underline-from-center:before {
-	left: 0;
-	right: 0;	 
-}
-
-/* Grow */
+/* Grow
+* Used for Sketch Send link and Nav Arrows
+* Author: Ian Lunn @IanLunn
+* Github: https://github.com/IanLunn/Hover
+* Made available under a MIT License:
+* http://www.opensource.org/licenses/mit-license.php
+* Modified by me
+*/
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;
@@ -710,8 +716,6 @@ footer p {
 	outline: 0;
 }
 
-
-
 /* 
 * RESPONSIVE DESIGN START 
 * Broken down into:
@@ -724,962 +728,931 @@ footer p {
 */
 
 @media screen and (min-width: 1050px) and (max-width: 1200px) {
-
-/* about changes */
-#about {
-	font-size: 16px;
+	/* ABOUT changes */
+	#about {
+		font-size: 16px;
+	}
+	
+	#bookDiv h1 {
+		margin-right: 12%;
+	}
+	
+	#skills {
+		width: 65%;
+	}
+	
+	#key {
+		margin-left: 3%;
+	}
+	
+	/* WORK changes */
+	#work {
+		height: 80vh;
+		font-size: 15px;
+	}
+	
+	.workInfo h3 {
+		font-size: 24px;
+	}
+	
+	.workInfo span {
+		font-size: 19px;
+	}
+	
+	/* Work NAV changed */
+	#left {
+		margin: 0 0 3% 4%;
+	}
+	
+	#right {
+		margin: 0 4% 3% 0;
+	}
+	
+	#circles {
+		bottom: 30%;
+	}
+	
+	/* contact changes */
+	.hvr-rectangle-in {
+		width: 80%;
+	}
+	
+	.contactIcon {
+		width: 15%;
+	}
+	
+	footer {
+		font-size: 15px;
+	}
 }
-
-#bookDiv h1 {
-	margin-right: 12%;
-}
-
-#skills {
-	width: 65%;
-}
-
-#key {
-	margin-left: 3%;
-}
-
-/* work changes */
-
-#work {
-	height: 80vh;
-	font-size: 15px;
-}
-
-.workInfo h3 {
-	font-size: 24px;
-}
-
-.workInfo span {
-	font-size: 19px;
-}
-
-/* Work NAV changed */
-
-#left {
-	margin: 0 0 3% 4%;
-}
-
-#right {
-	margin: 0 4% 3% 0;
-}
-
-#circles {
-	bottom: 30%;
-}
-
-/* contact changes */
-.hvr-rectangle-in {
-	width: 80%;
-}
-
-.contactIcon {
-	width: 15%;
-}
-
-footer {
-	font-size: 15px;
-}
-
-}
-
 
 @media screen and (min-width: 900px) and (max-width: 1049px) {
-
-.contentBlock {
-	margin-top: 7%;
+	.contentBlock {
+		margin-top: 7%;
+	}
+	
+	/*--- DASHBOARD ---*/
+	.hvr-underline-from-center {
+		font-size: 27px;
+	}
+	
+	/*--- INTRO ---*/
+	#introRight {
+		font-size: 18px;
+	}
+	
+	.intro-P {
+		margin-top: 8%;
+		margin-left: 3%;
+	}
+	
+	/*--- ABOUT ---*/
+	#about {
+		font-size: 16px;
+	}
+	
+	.expBlocks {
+		display: block;
+		width: 90%;
+		margin: 0 auto 5% auto;
+	}
+	
+	.expBlocks p {
+		margin: 2% 5% 0 5%;
+	}
+	
+	#bookLeft {
+		width: 70%;
+	}
+	
+	#bookDiv h1 {
+		line-height: 30px;
+		margin-right: 12%;
+	}
+	
+	#bookRight {
+		width: 18%;
+	}
+	
+	#columns {
+		display: table;
+		width: 90%;
+		margin-left: 3%;
+	}
+	
+	#columns th {
+		width: 20%;
+		text-align: center;
+		font-weight: strong;
+	}
+	
+	#skills {
+		display: table;
+		width: 90%;
+		margin-left: 2%;
+	}
+	
+	.rowHeader {
+		padding-right: 3%;
+		font-size: 18px;
+	}
+	
+	.colHeader {
+		display: none;
+	}
+	
+	#key {
+		display: none;
+	}
+	
+	#keyHor {
+		display: table;
+	}
+	
+	#rocket {
+		width: 15%;
+		margin: 0 8%;
+	}
+	
+	#future h3 {
+		width: 60%;
+	}
+	
+	.future-P {
+		width: 85%;
+		margin: 2% auto 0 auto;
+	}
+	
+	#future ul {
+		margin-left: 8%;
+	}
+	
+	/*--- WORK ---*/
+	.workItem {
+		vertical-align: top;
+	}
+	
+	.workImg {
+		display: block;
+		width: 70%;
+		margin: auto;
+	}
+	
+	.workImg img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.workInfo {
+		display: block;
+		width: 90%;
+		margin: auto;
+		text-align: left;
+	}
+	
+	.workInfo h4 {
+		height: 10px;
+		width: 15%;
+		float: left;
+		margin: 0 80% 2% 0;
+	}
+	
+	.workInfo h3 {
+		font-size: 24px;
+		margin-bottom: 2%;
+	}
+	.workInfo span {
+		font-size: 19px;
+	}
+	
+	/*--- CONTACT ---*/
+	.hvr-rectangle-in {
+		width: 90%;
+	}
+	
+	.contactIcon {
+		width: 15%;
+	}
 }
-
-/* dashboard */
-.hvr-underline-from-center {
-	font-size: 27px;
-}
-
-/* INTRO */
-#introRight {
-	font-size: 18px;
-}
-
-.intro-P {
-	margin-top: 8%;
-	margin-left: 3%;
-}
-
-/* about */
-#about {
-	font-size: 16px;
-}
-
-.expBlocks {
-	display: block;
-	width: 90%;
-	margin: 0 auto 5% auto;
-}
-
-.expBlocks p {
-	margin: 2% 5% 0 5%;
-}
-
-#bookLeft {
-	width: 70%;
-}
-
-#bookDiv h1 {
-	line-height: 30px;
-	margin-right: 12%;
-}
-
-#bookRight {
-	width: 18%;
-}
-
-#columns {
-	display: table;
-	width: 90%;
-	margin-left: 3%;
-}
-
-#columns th {
-	width: 20%;
-	text-align: center;
-	font-weight: strong;
-}
-
-#skills {
-	display: table;
-	width: 90%;
-	margin-left: 2%;
-}
-
-.rowHeader {
-	padding-right: 3%;
-	font-size: 18px;
-}
-
-.colHeader {
-	display: none;
-}
-
-#key {
-	display: none;
-}
-
-#keyHor {
-	display: table;
-}
-
-#rocket {
-	width: 15%;
-	margin: 0 8% 0 8%;
-}
-
-#future h3 {
-	width: 60%;
-}
-
-.future-P {
-	width: 85%;
-	margin: 2% auto 0 auto;
-}
-
-#future ul {
-	margin-left: 8%;
-}
-
-/* WORK */
-
-.workItem {
-	vertical-align: top;
-}
-
-.workImg {
-	display: block;
-	width: 70%;
-	margin: auto;
-}
-
-.workImg img {
-	width: 100%;
-	height: 100%;
-}
-
-.workInfo {
-	display: block;
-	width: 90%;
-	margin: auto;
-	text-align: left;
-}
-
-.workInfo h4 {
-height: 10px;
-width: 15%;
-float: left;
-margin: 0 80% 2% 0;
-}
-
-.workInfo h3 {
-	font-size: 24px;
-	margin-bottom: 2%;
-}
-.workInfo span {
-	font-size: 19px;
-}
-
-/* CONTACT */
-
-.hvr-rectangle-in {
-	width: 90%;
-}
-
-.contactIcon {
-	width: 15%;
-}
-
-}
-
 
 @media screen and (min-width: 700px) and (max-width: 899px){
-
-/* DASHBOARD */
-#dashboard {
-	display: block;
-	width: 100%;
-	height: auto;
-	float: none;
-	z-index: 100;
-	border-style: inherit;
-	border: solid;
-	border-width: 0 0 20px 0;
-	border-color: #4C4C4C;
+	/*--- DASHBOARD ---*/
+	#dashboard {
+		display: block;
+		width: 100%;
+		height: auto;
+		float: none;
+		z-index: 100;
+		border-style: inherit;
+		border: solid;
+		border-width: 0 0 20px 0;
+		border-color: #4C4C4C;
+	}
+	
+	#logoContainer {
+		display: inline-block;
+		width: 20%;
+		margin: 2% 5% 1% 2%;
+		vertical-align: top;
+	}
+	
+	.dashMenu {
+		display: inline-block;
+		width: 15%;
+		height: auto;
+		margin: 3% 5% 0 0;
+		text-align: center;
+	}
+	
+	.hvr-float {
+	  width: 55%;
+	  max-width: 100%;
+	  margin: auto;
+	}
+	
+	.hvr-underline-from-center {
+		font-size: 26px;
+		padding-top: 4%;
+		margin: 0;
+	}
+	
+	#rightContainer {
+		display: block;
+		width: 90%;
+		float: none;
+		margin: auto;
+	}
+	
+	/*--- INTRO ---*/
+	#intro {
+		margin-top: 25%;
+	}
+	
+	#introRight {
+		font-size: 17px;
+		width: 52%;
+	}
+	
+	.intro-P {
+		margin-top: 10%;
+		padding-right: 5%;
+	}
+	
+	/*--- ABOUT ---*/
+	#about {
+		font-size: 16px;
+	}
+	
+	.expBlocks {
+		display: block;
+		width: 90%;
+		margin: 0 auto 5% auto;
+	}
+	
+	.expBlocks p {
+		margin: 2% 5% 0 5%;
+	}
+	
+	#bookLeft {
+		width: 70%;
+	}
+	
+	#bookDiv h1 {
+		line-height: 30px;
+		margin-right: 12%;
+	}
+	
+	#bookRight {
+		width: 18%;
+	}
+	
+	#skills {
+		display: table;
+		width: 70%;
+		margin-left: 2%;
+		border-spacing: 5px 8px;
+	}
+	
+	.rowHeader {
+		padding-right: 3%;
+		font-size: 17px;
+	}
+	
+	.colHeader {
+		font-size: 18px;
+	}
+	
+	#key {
+		display: none;
+	}
+	
+	#keyHor {
+		display: table;
+	}
+	
+	#rocket {
+		width: 15%;
+		margin: 0 8% 0 8%;
+	}
+	
+	#future h3 {
+		width: 60%;
+	}
+	
+	.future-P {
+		width: 85%;
+		margin: 2% auto 0 auto;
+	}
+	
+	#future ul {
+		margin-left: 8%;
+	}
+	
+	/*--- WORK ---*/
+	.workItem {
+		vertical-align: top;
+	}
+	
+	.workImg {
+		display: block;
+		width: 70%;
+		margin: auto;
+	}
+	
+	.workImg img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.workInfo {
+		display: block;
+		width: 90%;
+		margin: auto;
+		text-align: left;
+	}
+	
+	.workInfo h4 {
+		height: 10px;
+		width: 15%;
+		float: left;
+		margin: 0 80% 2% 0;
+	}
+	
+	.workInfo h3 {
+		font-size: 24px;
+		margin-bottom: 2%;
+	}
+	.workInfo span {
+		font-size: 19px;
+	}
+	
+	/*--- CONTACT ---*/
+	.hvr-rectangle-in {
+		width: 90%;
+	}
+	
+	.contactIcon {
+		width: 15%;
+	}
 }
-
-#logoContainer {
-	display: inline-block;
-	width: 20%;
-	margin: 2% 5% 1% 2%;
-	vertical-align: top;
-}
-
-.dashMenu {
-	display: inline-block;
-	width: 15%;
-	height: auto;
-	margin: 3% 5% 0 0;
-	text-align: center;
-}
-
-.hvr-float {
-  width: 55%;
-  max-width: 100%;
-  margin: auto;
-}
-
-.hvr-underline-from-center {
-	font-size: 26px;
-	padding-top: 4%;
-	margin: 0;
-}
-
-#rightContainer {
-	display: block;
-	width: 90%;
-	float: none;
-	margin: auto;
-}
-
-/* INTRO */
-#intro {
-	margin-top: 25%;
-}
-
-#introRight {
-	font-size: 17px;
-	width: 52%;
-}
-
-.intro-P {
-	margin-top: 10%;
-	padding-right: 5%;
-}
-
-/* about */
-#about {
-	font-size: 16px;
-}
-
-.expBlocks {
-	display: block;
-	width: 90%;
-	margin: 0 auto 5% auto;
-}
-
-.expBlocks p {
-	margin: 2% 5% 0 5%;
-}
-
-#bookLeft {
-	width: 70%;
-}
-
-#bookDiv h1 {
-	line-height: 30px;
-	margin-right: 12%;
-}
-
-#bookRight {
-	width: 18%;
-}
-
-#skills {
-	display: table;
-	width: 70%;
-	margin-left: 2%;
-	border-spacing: 5px 8px;
-}
-
-.rowHeader {
-	padding-right: 3%;
-	font-size: 17px;
-}
-
-.colHeader {
-	font-size: 18px;
-}
-
-#key {
-	display: none;
-}
-
-#keyHor {
-	display: table;
-}
-
-#rocket {
-	width: 15%;
-	margin: 0 8% 0 8%;
-}
-
-#future h3 {
-	width: 60%;
-}
-
-.future-P {
-	width: 85%;
-	margin: 2% auto 0 auto;
-}
-
-#future ul {
-	margin-left: 8%;
-}
-
-/* WORK */
-
-.workItem {
-	vertical-align: top;
-}
-
-.workImg {
-	display: block;
-	width: 70%;
-	margin: auto;
-}
-
-.workImg img {
-	width: 100%;
-	height: 100%;
-}
-
-.workInfo {
-	display: block;
-	width: 90%;
-	margin: auto;
-	text-align: left;
-}
-
-.workInfo h4 {
-height: 10px;
-width: 15%;
-float: left;
-margin: 0 80% 2% 0;
-}
-
-.workInfo h3 {
-	font-size: 24px;
-	margin-bottom: 2%;
-}
-.workInfo span {
-	font-size: 19px;
-}
-
-
-/* CONTACT */
-
-.hvr-rectangle-in {
-	width: 90%;
-}
-
-.contactIcon {
-	width: 15%;
-}
-
-}
-
 
 @media screen and (min-width: 500px) and (max-width: 699px){
-
-.contentBlock {
-	margin: 10% 0 0 0;
-}
-
-/* DASHBOARD */
-#dashboard {
-	display: block;
-	width: 100%;
-	height: auto;
-	float: none;
-	z-index: 100;
-	border-style: inherit;
-	border: solid;
-	border-width: 0 0 20px 0;
-	border-color: #4C4C4C;
-}
-
-#logoContainer {
-	display: inline-block;
-	width: 20%;
-	margin: 2% 5% 1% 2%;
-	vertical-align: top;
-}
-
-.dashMenu {
-	display: inline-block;
-	width: 15%;
-	height: auto;
-	margin: 3% 5% 0 0;
-	text-align: center;
-}
-
-.hvr-float {
-  width: 55%;
-  max-width: 100%;
-  margin: auto;
-}
-
-.hvr-underline-from-center {
-	font-size: 22px;
-	padding-top: 4%;
-	margin: 0;
-}
-
-#rightContainer {
-	display: block;
-	width: 90%;
-	float: none;
-	margin: auto;
-}
-
-/* INTRO */
-#intro {
-	margin-top: 27%;
-	padding: 3% 0;
-}
-
-#introLeft {
-	display: block;
-	width: 100%;
-	height: 50%;
-}
-
-#introLeft h1 {
-	display: none;
-}
-
-#trevPic {
-	display: block;
-	margin: 5% auto;
-	height: 100%;
-}
-
-#introRight {
-	display: block;
-	float: none;
-	margin: 6% auto;
-	font-size: 16px;
-	width: 86%;
-	padding-bottom: 100px;
-}
-
-.intro-P {
-	display: block;
-	width: 100%;
-	margin: 5% 0 0 0;
-	padding: 0 0 0 0;
-}
-
-
-
-/* about */
-#about {
-	font-size: 15px;
-}
-
-.expBlocks {
-	display: block;
-	width: 90%;
-	margin: 0 auto 5% auto;
-}
-
-.expBlocks p {
-	margin: 2% 5% 0 5%;
-}
-
-#bookLeft {
-	width: 70%;
-}
-
-#bookDiv h1 {
-	line-height: 30px;
-	margin-right: 12%;
-}
-
-#bookRight {
-	width: 18%;
-}
-
-#columns {
-	display: table;
-	width: 90%;
-	text-align: center;
-	font-size: 14px;
-}
-
-#columns th {
-	width: 20%;
-	font-weight: normal;
-}
-
-#skills {
-	display: table;
-	width: 90%;
-	border-spacing: 4px 8px;
-}
-
-.rowHeader {
-	font-size: 13px;
-}
-
-.colHeader {
-	display: none;
-}
-
-#key {
-	display: none;
-}
-
-#keyHor {
-	display: table;
-	border-spacing: 40px 10px;
-}
-
-.scale {
-	display: none;
-}
-
-#rocket {
-	width: 15%;
-	margin: 0 8% 0 8%;
-}
-
-#future h3 {
-	width: 60%;
-}
-
-.future-P {
-	width: 85%;
-	margin: 2%  auto;
-}
-
-#future ul {
-	margin-left: 8%;
-	margin-bottom: 2%;
-}
-
-/* WORK */
-
-.workItem {
-	vertical-align: top;
-}
-
-.workImg {
-	display: block;
-	width: 85%;
-	margin: auto;
-}
-
-.workImg img {
-	width: 100%;
-	height: 100%;
-}
-
-.workInfo {
-	display: block;
-	width: 90%;
-	margin: auto;
-	text-align: left;
-}
-
-.workInfo h4 {
-	height: 10px;
-	width: 15%;
-	float: left;
-	margin: 0 80% 2% 0;
-}
-
-.workInfo h3 {
-	font-size: 24px;
-	margin-bottom: 2%;
-}
-.workInfo span {
-	font-size: 18px;
-}
-
-#left {
-	width: 40px;
-}
-
-#right {
-	width: 40px;
-}
-
-/* CONTACT */
-
-#contactLeft {
-	display: block;
-	width: 90%;
-	margin: auto;
-}
-
-#socials {
-	display: block;
-	width: 100%;
-	float: none;
-}
-
-.hvr-rectangle-in {
-	display: inline-block;
-	width: 47%;
-	margin: 0;
-	padding: 2% 0 2% 2%;
-	vertical-align: bottom;
-
-}
-
-.hvr-rectangle-in span {
-	font-size: 13px;
-	margin-left: 2%;
-}
-
-.contactIcon {
-	width: 20%;
-
-}
-
+	.contentBlock {
+		margin: 10% 0 0 0;
+	}
+	
+	#rightContainer {
+		display: block;
+		width: 90%;
+		float: none;
+		margin: auto;
+	}
+	
+	/*--- DASHBOARD ---*/
+	#dashboard {
+		display: block;
+		width: 100%;
+		height: auto;
+		float: none;
+		z-index: 100;
+		border-style: inherit;
+		border: solid;
+		border-width: 0 0 20px 0;
+		border-color: #4C4C4C;
+	}
+	
+	#logoContainer {
+		display: inline-block;
+		width: 20%;
+		margin: 2% 5% 1% 2%;
+		vertical-align: top;
+	}
+	
+	.dashMenu {
+		display: inline-block;
+		width: 15%;
+		height: auto;
+		margin: 3% 5% 0 0;
+		text-align: center;
+	}
+	
+	.hvr-float {
+	  width: 55%;
+	  max-width: 100%;
+	  margin: auto;
+	}
+	
+	.hvr-underline-from-center {
+		font-size: 22px;
+		padding-top: 4%;
+		margin: 0;
+	}
+	
+	/*--- INTRO ---*/
+	#intro {
+		margin-top: 27%;
+		padding: 3% 0;
+	}
+	
+	#introLeft {
+		display: block;
+		width: 100%;
+		height: 50%;
+	}
+	
+	#introLeft h1 {
+		display: none;
+	}
+	
+	#trevPic {
+		display: block;
+		margin: 5% auto;
+		height: 100%;
+	}
+	
+	#introRight {
+		display: block;
+		float: none;
+		margin: 6% auto;
+		font-size: 16px;
+		width: 86%;
+		padding-bottom: 100px;
+	}
+	
+	.intro-P {
+		display: block;
+		width: 100%;
+		margin: 5% 0 0 0;
+		padding: 0 0 0 0;
+	}
+	
+	/*--- ABOUT ---*/
+	#about {
+		font-size: 15px;
+	}
+	
+	.expBlocks {
+		display: block;
+		width: 90%;
+		margin: 0 auto 5% auto;
+	}
+	
+	.expBlocks p {
+		margin: 2% 5% 0 5%;
+	}
+	
+	#bookLeft {
+		width: 70%;
+	}
+	
+	#bookDiv h1 {
+		line-height: 30px;
+		margin-right: 12%;
+	}
+	
+	#bookRight {
+		width: 18%;
+	}
+	
+	#columns {
+		display: table;
+		width: 90%;
+		text-align: center;
+		font-size: 14px;
+	}
+	
+	#columns th {
+		width: 20%;
+		font-weight: normal;
+	}
+	
+	#skills {
+		display: table;
+		width: 90%;
+		border-spacing: 4px 8px;
+	}
+	
+	.rowHeader {
+		font-size: 13px;
+	}
+	
+	.colHeader {
+		display: none;
+	}
+	
+	#key {
+		display: none;
+	}
+	
+	#keyHor {
+		display: table;
+		border-spacing: 40px 10px;
+	}
+	
+	.scale {
+		display: none;
+	}
+	
+	#rocket {
+		width: 15%;
+		margin: 0 8%;
+	}
+	
+	#future h3 {
+		width: 60%;
+	}
+	
+	.future-P {
+		width: 85%;
+		margin: 2%  auto;
+	}
+	
+	#future ul {
+		margin-left: 8%;
+		margin-bottom: 2%;
+	}
+	
+	/*--- WORK ---*/
+	.workItem {
+		vertical-align: top;
+	}
+	
+	.workImg {
+		display: block;
+		width: 85%;
+		margin: auto;
+	}
+	
+	.workImg img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.workInfo {
+		display: block;
+		width: 90%;
+		margin: auto;
+		text-align: left;
+	}
+	
+	.workInfo h4 {
+		height: 10px;
+		width: 15%;
+		float: left;
+		margin: 0 80% 2% 0;
+	}
+	
+	.workInfo h3 {
+		font-size: 24px;
+		margin-bottom: 2%;
+	}
+	.workInfo span {
+		font-size: 18px;
+	}
+	
+	#left {
+		width: 40px;
+	}
+	
+	#right {
+		width: 40px;
+	}
+	
+	/*--- CONTACT ---*/
+	#contactLeft {
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+	
+	#socials {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	
+	.hvr-rectangle-in {
+		display: inline-block;
+		width: 47%;
+		margin: 0;
+		padding: 2% 0 2% 2%;
+		vertical-align: bottom;
+	}
+	
+	.hvr-rectangle-in span {
+		font-size: 13px;
+		margin-left: 2%;
+	}
+	
+	.contactIcon {
+		width: 20%;
+	}
 }
 
 @media screen and (max-width: 499px) {
-
-
-.contentBlock {
-	margin: 10% 0 0 0;
-}
-
-/* DASHBOARD */
-#dashboard {
-	display: block;
-	width: 100%;
-	height: auto;
-	float: none;
-	z-index: 100;
-	border-style: inherit;
-	border: solid;
-	border-width: 0 0 20px 0;
-	border-color: #4C4C4C;
-}
-
-#logoContainer {
-	display: inline-block;
-	width: 20%;
-	margin: 2% 0 1% 2%;
-	vertical-align: top;
-}
-
-.dashMenu {
-	display: inline-block;
-	width: 20%;
-	height: auto;
-	margin: 3% 2% 1% 0;
-	text-align: center;
-}
-
-.hvr-float {
-  width: 50%;
-  max-width: 100%;
-  margin: auto;
-}
-
-#aboutLink:hover > .hvr-float {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-#workLink:hover > .hvr-float {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-#contactLink:hover > .hvr-float {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-.hvr-underline-from-center {
-	font-size: 16px;
-	padding-top: 4%;
-	margin: 0;
-}
-
-
-#rightContainer {
-	display: block;
-	width: 90%;
-	float: none;
-	margin: auto;
-}
-
-/* INTRO */
-#intro {
-	margin-top: 35%;
-	padding: 3% 0;
-}
-
-#introLeft {
-	display: block;
-	width: 100%;
-	height: 50%;
-}
-
-#introLeft h1 {
-	display: none;
-}
-
-#trevPic {
-	display: block;
-	margin: 5% auto;
-	height: 100%;
-}
-
-#introRight {
-	display: block;
-	float: none;
-	margin: 10% auto;
-	font-size: 13px;
-	width: 90%;
-	padding-bottom: 100px;
-}
-
-.intro-P {
-	display: block;
-	width: 100%;
-	margin: 5% 0 0 0;
-	padding: 0 0 0 0;
-}
-
-
-
-/* about */
-#about {
-	font-size: 13px;
-}
-
-.expBlocks {
-	display: block;
-	width: 90%;
-	margin: 0 auto 5% auto;
-}
-
-.expBlocks p {
-	margin: 2% 5% 0 5%;
-}
-
-.expBlocks h3 {
-	font-size: 24px;
-}
-
-#bookLeft {
-	width: 70%;
-}
-
-#bookDiv h1 {
-	font-size: 22px;
-	line-height: 24px;
-	margin-right: 12%;
-}
-
-#bookRight {
-	width: 22%;
-}
-
-#skills {
-	display: table;
-	width: 94%;
-	border-spacing: 0 7px;
-}
-
-.rowHeader {
-	font-size: 9.5px;
-}
-
-.colHeader {
-	display: none;
-}
-
-#key {
-	display: none;
-}
-
-#keyHor {
-	display: table;
-	border-spacing: 25px 10px;
-}
-
-.scale {
-	display: none;
-}
-
-#rocket {
-	width: 18%;
-	margin: 0 5% 0 8%;
-}
-
-#future h3 {
-	width: 60%;
-	font-size: 22px;
-}
-
-.future-P {
-	width: 85%;
-	margin: 4%  auto;
-}
-
-#future ul {
-	margin-left: 3%;
-	margin-bottom: 4%;
-}
-
-/* WORK */
-
-.workItem {
-	vertical-align: top;
-	width: 32.9%;
-}
-
-.workImg {
-	display: block;
-	width: 90%;
-	margin: auto;
-}
-
-.workImg img {
-	width: 100%;
-	height: 100%;
-}
-
-.workInfo {
-	display: block;
-	width: 90%;
-	font-size: 13px;
-	margin: auto;
-	text-align: left;
-}
-
-.workInfo h4 {
-	height: 10px;
-	width: 22%;
-	float: left;
-	margin: 0 80% 3% 0;
-}
-
-.workInfo h3 {
-	font-size: 23px;
-	margin-bottom: 5%;
-}
-.workInfo span {
-	font-size: 16px;
-}
-
-#left {
-	width: 40px;
-	margin: 0 0 5% 3%;
-}
-
-#right {
-	width: 40px;
-	margin: 0 3% 5% 0;
-}
-
-#circles {
-	width: 70px;
-	margin-left: -35px;
-}
-
-/* CONTACT */
-
-#contactLeft {
-	display: block;
-	width: 90%;
-	margin: auto;
-}
-
-#contact h2 {
-	font-size: 29px;
-}
-
-.contactInfo {
-	font-size: 16px;
-}
-
-#address {
-	font-size: 17.5px;
-}
-
-#socials {
-	display: block;
-	width: 100%;
-	float: none;
-}
-
-.contactIcon {
-	width: 16%;
-}
-
-.hvr-rectangle-in {
-	display: block;
-	width: 75%;
-	margin: auto;
-	padding: 2%;
-	vertical-align: bottom;
-}
-
-.hvr-rectangle-in span {
-	font-size: 13px;
-	margin-left: 2%;
-}
-
-footer {
-	font-size: 12.5px;
-}
-
+	.contentBlock {
+		margin: 10% 0 0 0;
+	}
+	
+	#rightContainer {
+		display: block;
+		width: 90%;
+		float: none;
+		margin: auto;
+	}
+	
+	/*--- DASHBOARD ---*/
+	#dashboard {
+		display: block;
+		width: 100%;
+		height: auto;
+		float: none;
+		z-index: 100;
+		border-style: inherit;
+		border: solid;
+		border-width: 0 0 20px 0;
+		border-color: #4C4C4C;
+	}
+	
+	#logoContainer {
+		display: inline-block;
+		width: 20%;
+		margin: 2% 0 1% 2%;
+		vertical-align: top;
+	}
+	
+	.dashMenu {
+		display: inline-block;
+		width: 20%;
+		height: auto;
+		margin: 3% 2% 1% 0;
+		text-align: center;
+	}
+	
+	.hvr-float {
+	  width: 50%;
+	  max-width: 100%;
+	  margin: auto;
+	}
+	
+	#aboutLink:hover > .hvr-float {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
+	
+	#workLink:hover > .hvr-float {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
+	
+	#contactLink:hover > .hvr-float {
+		-webkit-transform: translateY(-6px);
+		transform: translateY(-6px);
+	}
+	
+	.hvr-underline-from-center {
+		font-size: 16px;
+		padding-top: 4%;
+		margin: 0;
+	}
+	
+	/* INTRO */
+	#intro {
+		margin-top: 35%;
+		padding: 3% 0;
+	}
+	
+	#introLeft {
+		display: block;
+		width: 100%;
+		height: 50%;
+	}
+	
+	#introLeft h1 {
+		display: none;
+	}
+	
+	#trevPic {
+		display: block;
+		margin: 5% auto;
+		height: 100%;
+	}
+	
+	#introRight {
+		display: block;
+		float: none;
+		margin: 10% auto;
+		font-size: 13px;
+		width: 90%;
+		padding-bottom: 100px;
+	}
+	
+	.intro-P {
+		display: block;
+		width: 100%;
+		margin: 5% 0 0 0;
+		padding: 0 0 0 0;
+	}
+	
+	/*--- ABOUT ---*/
+	#about {
+		font-size: 13px;
+	}
+	
+	.expBlocks {
+		display: block;
+		width: 90%;
+		margin: 0 auto 5% auto;
+	}
+	
+	.expBlocks p {
+		margin: 2% 5% 0 5%;
+	}
+	
+	.expBlocks h3 {
+		font-size: 24px;
+	}
+	
+	#bookLeft {
+		width: 70%;
+	}
+	
+	#bookDiv h1 {
+		font-size: 22px;
+		line-height: 24px;
+		margin-right: 12%;
+	}
+	
+	#bookRight {
+		width: 22%;
+	}
+	
+	#skills {
+		display: table;
+		width: 94%;
+		border-spacing: 0 7px;
+	}
+	
+	.rowHeader {
+		font-size: 9.5px;
+	}
+	
+	.colHeader {
+		display: none;
+	}
+	
+	#key {
+		display: none;
+	}
+	
+	#keyHor {
+		display: table;
+		border-spacing: 25px 10px;
+	}
+	
+	.scale {
+		display: none;
+	}
+	
+	#rocket {
+		width: 18%;
+		margin: 0 5% 0 8%;
+	}
+	
+	#future h3 {
+		width: 60%;
+		font-size: 22px;
+	}
+	
+	.future-P {
+		width: 85%;
+		margin: 4%  auto;
+	}
+	
+	#future ul {
+		margin-left: 3%;
+		margin-bottom: 4%;
+	}
+	
+	/*--- WORK ---*/
+	
+	.workItem {
+		vertical-align: top;
+		width: 32.9%;
+	}
+	
+	.workImg {
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+	
+	.workImg img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.workInfo {
+		display: block;
+		width: 90%;
+		font-size: 13px;
+		margin: auto;
+		text-align: left;
+	}
+	
+	.workInfo h4 {
+		height: 10px;
+		width: 22%;
+		float: left;
+		margin: 0 80% 3% 0;
+	}
+	
+	.workInfo h3 {
+		font-size: 23px;
+		margin-bottom: 5%;
+	}
+	.workInfo span {
+		font-size: 16px;
+	}
+	
+	#left {
+		width: 40px;
+		margin: 0 0 5% 3%;
+	}
+	
+	#right {
+		width: 40px;
+		margin: 0 3% 5% 0;
+	}
+	
+	#circles {
+		width: 70px;
+		margin-left: -35px;
+	}
+	
+	/* CONTACT */
+	#contactLeft {
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+	
+	#contact h2 {
+		font-size: 29px;
+	}
+	
+	.contactInfo {
+		font-size: 16px;
+	}
+	
+	#address {
+		font-size: 17.5px;
+	}
+	
+	#socials {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	
+	.contactIcon {
+		width: 16%;
+	}
+	
+	.hvr-rectangle-in {
+		display: block;
+		width: 75%;
+		margin: auto;
+		padding: 2%;
+		vertical-align: bottom;
+	}
+	
+	.hvr-rectangle-in span {
+		font-size: 13px;
+		margin-left: 2%;
+	}
+	
+	footer {
+		font-size: 12.5px;
+	}
 }
