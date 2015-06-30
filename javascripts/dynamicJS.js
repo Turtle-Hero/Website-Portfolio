@@ -2,8 +2,6 @@ $(document).ready(function() {
 // Variables for Work scrolling functionaltiy
 
 	var itemWidth = $('.workItem').width();		//width of work div
-	var doubleWidth = itemWidth + itemWidth;	// double width of work div
-	var current = 0;	//current horizontal position of work div
 	var index = 0;		//current position of circle indicators
 
 // Variables for Dashboard functionality
@@ -64,27 +62,28 @@ $(document).ready(function() {
 
 
 	$('#right').click(function(){
+
+		itemWidth = $('.workItem').width();
 		
-		if (current == doubleWidth){
-			current = 0;
+		if (index == 2){
 			index = 0;
 		} else {
-			current = current + itemWidth;
 			index++;
 		}
-		$('#work').animate( { scrollLeft: current}, 800);
+		$('#work').animate( { scrollLeft: (index * itemWidth)}, 800);
 		circles(index);
 	});
 
 	$('#left').click(function() {
-		if (current == 0){
-			current = (doubleWidth);
+
+		itemWidth = $('.workItem').width();
+
+		if (index == 0){
 			index = 2;
 		} else {
-			current = current - itemWidth;
 			index--;
 		}
-		$('#work').animate( { scrollLeft: current}, 800);
+		$('#work').animate( { scrollLeft: (index * itemWidth)}, 800);
 		circles(index);
 	});
 
