@@ -15,7 +15,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		scrollDist = $("#about").offset().top;
-		marginOffset = 0.5 * parseFloat($('#about').css("margin-top"));
+		marginOffset = 0.2 * parseFloat($('#about').css("margin-top"));
 		dashHeight = $('#dashboard').height();
 
 		totOffset = scrollDist - marginOffset;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		scrollDist = $("#work").offset().top;
-		marginOffset = 0.5 * parseFloat($('#about').css("margin-top"));
+		marginOffset = 0.2 * parseFloat($('#about').css("margin-top"));
 		dashHeight = $('#dashboard').height();
 
 		totOffset = scrollDist - marginOffset;
@@ -48,7 +48,7 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		scrollDist = $("#contact").offset().top;
-		marginOffset = 0.5 * parseFloat($('#about').css("margin-top"));
+		marginOffset = 0.2 * parseFloat($('#about').css("margin-top"));
 		dashHeight = $('#dashboard').height();
 
 		totOffset = scrollDist - marginOffset;
