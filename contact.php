@@ -13,3 +13,4 @@ echo  $message = $_POST["contact_message"];
 echo $thankYou="<p>Thank you! I will be in contact with you shortly.</p>";
 
 }
+?>
