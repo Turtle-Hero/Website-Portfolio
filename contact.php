@@ -1,34 +1,15 @@
 <?php
-$field_name = $_POST['contact_name'];
-$field_email = $_POST['contact_email'];
-$field_subject = $_POST['contact_subject'];
-$field_message = $_POST['contact_message'];
+if(isset($_POST["submit"])) {
+$recipient = "twarner714@gmail.com"; //my email
+echo $subject = $_POST ["contact_subject"];
+echo $name = $_POST ["contact_name"];
+echo $email = $_POST["contact_email"];
+echo  $message = $_POST["contact_message"];
 
+ $mailBody="Name: $name\nEmail: $email\n\n$message"; 
 
-$mail_to = 'twarner714@gmail.com';
-$subject = 'Portfolio contact wants: '.$field_subject;
+ mail($recipient, $subject, $mailBody, "From: $name <$email>");
 
-$body_message = 'From: '.$field_name."\n";
-$body_message .= 'E-mail: '.$field_email."\n";
-$body_message .= 'Message: '.$field_message;
+echo $thankYou="<p>Thank you! I will be in contact with you shortly.</p>";
 
-$headers = 'From: '.$field_email."\r\n";
-$headers .= 'Reply-To: '.$field_email."\r\n";
-
-$mail_status = mail($mail_to, $subject, $body_message, $headers);
-
-if ($mail_status) { ?>
-	<script language="javascript" type="text/javascript">
-		alert('Thank you for the message. I will contact you shortly.');
-		window.location = 'index.html';
-	</script>
-<?php
 }
-else { ?>
-	<script language="javascript" type="text/javascript">
-		alert('Message failed. Please, send an email to twarner714@gmail.com');
-		window.location = 'index.html';
-	</script>
-<?php
-}
-?>
